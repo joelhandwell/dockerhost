@@ -1,0 +1,1 @@
+docker-machine create --driver generic --generic-ip-address=192.168.99.103 --generic-ssh-user=docker --generic-ssh-key=vagrant.pem default
