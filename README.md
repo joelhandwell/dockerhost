@@ -1,5 +1,5 @@
 # dockerhost
-Docker host configuration for docker-machine and Vagrant on Windows
+Docker host for docker-machine with flexible VM configuration via Vagrant on Windows
 
 Why not just docker-machine?
 
