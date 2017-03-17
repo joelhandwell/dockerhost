@@ -31,46 +31,14 @@ Setting Docker configuration on the remote daemon...
 Checking connection to Docker...
 Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env machine-vbox
-
-docker@machine-vbox:~$ docker run -it ubuntu /bin/bash
-Unable to find image 'ubuntu:latest' locally
-latest: Pulling from library/ubuntu
-d54efb8db41d: Pull complete
-f8b845f45a87: Pull complete
-e8db7bf7c39f: Pull complete
-9654c40e9079: Pull complete
-6d9ef359eaaa: Pull complete
-Digest: sha256:dd7808d8792c9841d0b460122f1acf0a2dd1f56404f8d1e56298048885e45535
-Status: Downloaded newer image for ubuntu:latest
-
-root@8d8d53437f8c:/# lscpu
-Architecture:          x86_64
-CPU op-mode(s):        32-bit, 64-bit
-Byte Order:            Little Endian
-CPU(s):                1
-On-line CPU(s) list:   0
-Thread(s) per core:    1
-Core(s) per socket:    1
-Socket(s):             1
-Vendor ID:             GenuineIntel
-CPU family:            6
-Model:                 79
-Model name:            Intel(R) Xeon(R) CPU E5-4610 v4 @ 1.80GHz
-Stepping:              1
-CPU MHz:               1795.843
-BogoMIPS:              3591.68
-Hypervisor vendor:     KVM
-Virtualization type:   full
-L1d cache:             32K
-L1i cache:             32K
-L2 cache:              256K
-L3 cache:              25600K
-Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc pni pclmulqdq monitor ssse3 cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch rdseed
-
-root@8d8d53437f8c:/# free -g
-              total        used        free      shared  buff/cache   available
-Mem:              0           0           0           0           0           0
-Swap:             1           0           1
+```
+What I get:
+```
+docker@machine-vbox:~$ docker info
+...
+CPUs: 1
+Total Memory: 995.8 MiB
+...
 ```
 
 ## with this:
@@ -142,44 +110,12 @@ Setting Docker configuration on the remote daemon...
 Checking connection to Docker...
 Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env default
-    
-docker@default:~$ docker run -it ubuntu /bin/bash
-Unable to find image 'ubuntu:latest' locally
-latest: Pulling from library/ubuntu
-d54efb8db41d: Pull complete
-f8b845f45a87: Pull complete
-e8db7bf7c39f: Pull complete
-9654c40e9079: Pull complete
-6d9ef359eaaa: Pull complete
-Digest: sha256:dd7808d8792c9841d0b460122f1acf0a2dd1f56404f8d1e56298048885e45535
-Status: Downloaded newer image for ubuntu:latest
-
-root@b966201aded9:/# lscpu
-Architecture:          x86_64
-CPU op-mode(s):        32-bit, 64-bit
-Byte Order:            Little Endian
-CPU(s):                8
-On-line CPU(s) list:   0-7
-Thread(s) per core:    1
-Core(s) per socket:    8
-Socket(s):             1
-Vendor ID:             GenuineIntel
-CPU family:            6
-Model:                 79
-Model name:            Intel(R) Xeon(R) CPU E5-4610 v4 @ 1.80GHz
-Stepping:              1
-CPU MHz:               1795.843
-BogoMIPS:              3591.68
-Hypervisor vendor:     KVM
-Virtualization type:   full
-L1d cache:             32K
-L1i cache:             32K
-L2 cache:              256K
-L3 cache:              25600K
-Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc pni pclmulqdq ssse3 cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch rdseed
-
-root@b966201aded9:/# free -g
-              total        used        free      shared  buff/cache   available
-Mem:              7           0           7           0           0           7
-Swap:             1           0           1
+```
+What I get:
+```
+docker@default:~$ docker info
+...
+CPUs: 8
+Total Memory: 7.789 GiB
+...
 ```
