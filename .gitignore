@@ -1,1 +1,6 @@
 .vagrant
+*.pem
+*.ppk
+*.bat
+!crate.bat
+
