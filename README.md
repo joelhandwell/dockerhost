@@ -32,7 +32,7 @@ Checking connection to Docker...
 Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env machine-vbox
 ```
-What I get:
+What we get:
 ```
 docker@machine-vbox:~$ docker info
 ...
@@ -40,6 +40,8 @@ CPUs: 1
 Total Memory: 995.8 MiB
 ...
 ```
+plus, [we can not chose IP](https://github.com/docker/machine/issues/1709).
+
 
 ## with this:
 Vagrantfile
@@ -111,7 +113,7 @@ Checking connection to Docker...
 Docker is up and running!
 To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\ProgramData\chocolatey\lib\docker-machine\bin\docker-machine.exe env default
 ```
-What I get:
+What we get:
 ```
 docker@default:~$ docker info
 ...
@@ -119,3 +121,4 @@ CPUs: 8
 Total Memory: 7.789 GiB
 ...
 ```
+plus, we can chose IP, the box comes with latest version of Virtualbox Guest Addition, and one more thing, latest with [ctop](https://github.com/bcicen/ctop).
