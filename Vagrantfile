@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
   # install docker
   config.vm.provision "shell", inline: "sudo apt-get install apt-transport-https ca-certificates curl software-properties-common"
   config.vm.provision "shell", inline: "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -"
-  config.vm.provision "shell", inline: 'sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"'
+  config.vm.provision "shell", inline: 'sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial edge"'
   config.vm.provision "shell", inline: "sudo apt-get update"
   config.vm.provision "shell", inline: "sudo apt-get install -y linux-image-extra-$(uname -r) linux-image-extra-virtual"
   config.vm.provision "shell", inline: "sudo apt-get install -y docker-ce"
@@ -22,6 +22,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: 'su - vagrant -c "docker ps"'
 
   # install ctop
-  config.vm.provision "shell", inline: "sudo wget -q https://github.com/bcicen/ctop/releases/download/v0.5/ctop-0.5-linux-amd64 -O /usr/local/bin/ctop"
+  config.vm.provision "shell", inline: "sudo wget -q https://github.com/bcicen/ctop/releases/download/v0.5.1/ctop-0.5.1-linux-amd64 -O /usr/local/bin/ctop"
   config.vm.provision "shell", inline: "sudo chmod +x /usr/local/bin/ctop"
 end
