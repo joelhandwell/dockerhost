@@ -121,4 +121,4 @@ CPUs: 8
 Total Memory: 7.789 GiB
 ...
 ```
-plus, we can chose IP, the box comes with latest version of Virtualbox Guest Addition, and one more thing, latest with [ctop](https://github.com/bcicen/ctop).
+plus, we can chose IP, the box comes with latest version of Virtualbox Guest Addition, and one more thing, latest [ctop](https://github.com/bcicen/ctop).
