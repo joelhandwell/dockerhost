@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
     v.cpus = 16
   end
   config.vm.synced_folder ".", "/vagrant", disabled: true
-  config.vm.synced_folder "C:/Users", "/c/Users"
+  #config.vm.synced_folder "C:/Users", "/c/Users"
   config.vm.network "private_network", ip: "192.168.2.193"
 
   config.vm.provision "shell", inline: "echo install docker"
@@ -24,6 +24,12 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "echo install docker-compose"
   config.vm.provision "shell", inline: 'sudo curl -L "https://github.com/docker/compose/releases/download/1.12.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose'
   config.vm.provision "shell", inline: "sudo chmod +x /usr/local/bin/docker-compose"
+
+  config.vm.provision "shell", inline: "echo install jid"
+  config.vm.provision "shell", inline: "sudo apt-get -q -y install unzip"
+  config.vm.provision "shell", inline: 'sudo curl -L "https://github.com/simeji/jid/releases/download/0.7.2/jid_linux_amd64.zip" -o /tmp/jid.zip'
+  config.vm.provision "shell", inline: "sudo unzip -o /tmp/jid.zip -d /usr/local/bin/"
+  config.vm.provision "shell", inline: "sudo ln -s /usr/local/bin/jid_linux_amd64 /usr/local/bin/jid"
 
   config.vm.provision "shell", inline: "echo install ctop, htop and netdata"
   config.vm.provision "shell", inline: "sudo wget -q https://github.com/bcicen/ctop/releases/download/v0.5.1/ctop-0.5.1-linux-amd64 -O /usr/local/bin/ctop"
