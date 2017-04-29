@@ -18,7 +18,7 @@ clone this repo, and declare configrations like following:
 
 ```ruby
 Vagrant.configure("2") do |config|
-  config.vm.box = "AlbanMontaigu/boot2docker"
+  config.vm.box = "joelhandwell/dockerhost"
   config.vm.provider "virtualbox" do |v|
     v.memory = 8192
     v.cpus = 8
@@ -32,7 +32,7 @@ end
 ```create.bat```
 
 ```bat
-docker-machine create --driver generic --generic-ip-address=192.168.99.103 --generic-ssh-user=docker --generic-ssh-key=vagrant.pem default
+docker-machine create --driver generic --generic-ip-address=192.168.99.103 --generic-ssh-user=vagrant --generic-ssh-key=vagrant.pem default
 ```
 
 and run:
