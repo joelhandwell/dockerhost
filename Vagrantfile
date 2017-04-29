@@ -38,4 +38,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "git clone https://github.com/firehol/netdata.git --depth=1"
   config.vm.provision "shell", inline: 'cd netdata && echo -e "\n" | sudo ./netdata-installer.sh'
   config.vm.provision "shell", inline: "rm -rf /home/vagrant/netdata"
+
+  # set the locale to environment vars needed by perl
+  config.vm.provision "shell", inline: "echo 'LANGUAGE=en_US.UTF-8' | sudo tee -a /etc/environment"
+  config.vm.provision "shell", inline: "echo 'LC_ALL=en_US.UTF-8' | sudo tee -a /etc/environment"
 end
