@@ -44,9 +44,9 @@ create
 
 ## What's inside:
 
-* Virtualbox Guest Addition 5.1.20
-* docker 17.04.0-ce
-* docker-compose 1.12.0
+* Virtualbox Guest Addition 5.1.22
+* docker 17.05.0-ce
+* docker-compose 1.13.0
 * htop 2.0.1
 * [ctop](https://github.com/bcicen/ctop) 0.5.1
 * [netdata](https://github.com/firehol/netdata) 1.6.1
