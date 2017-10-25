@@ -1,8 +1,8 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "joelhandwell/ubuntu_xenial64_vbguest"
   config.vm.provider "virtualbox" do |v|
-    v.memory = 16384
-    v.cpus = 16
+    v.memory = 4096
+    v.cpus = 4
   end
   config.vm.synced_folder ".", "/vagrant", disabled: true
   #config.vm.synced_folder "C:/Users", "/c/Users"
