@@ -44,10 +44,10 @@ create
 
 ## What's inside:
 
-* Virtualbox Guest Addition 5.1.22
-* docker 17.05.0-ce
-* docker-compose 1.13.0
+* Virtualbox Guest Addition 5.1.26
+* docker 17.10.0-ce
+* docker-compose 1.16.1
 * htop 2.0.1
-* [ctop](https://github.com/bcicen/ctop) 0.5.1
-* [netdata](https://github.com/firehol/netdata) 1.6.1
+* [ctop](https://github.com/bcicen/ctop) 0.6.1
+* [netdata](https://github.com/firehol/netdata) 1.8.0
 * [jid](https://github.com/simeji/jid) 0.7.2
