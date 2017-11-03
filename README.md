@@ -32,7 +32,7 @@ end
 ```create.bat```
 
 ```bat
-docker-machine create --driver generic --generic-ip-address=192.168.99.103 --generic-ssh-user=vagrant --generic-ssh-key=vagrant.pem default
+docker-machine create --driver generic --generic-ip-address=192.168.99.103 --generic-ssh-user=vagrant --generic-ssh-key=vagrant default
 ```
 
 and run:
