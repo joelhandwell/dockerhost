@@ -20,19 +20,19 @@ clone this repo, and declare configrations like following:
 Vagrant.configure("2") do |config|
   config.vm.box = "joelhandwell/dockerhost"
   config.vm.provider "virtualbox" do |v|
-    v.memory = 8192
-    v.cpus = 8
+    v.memory = 4096
+    v.cpus = 4
   end
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.synced_folder "C:/Users", "/c/Users"
-  config.vm.network "private_network", ip: "192.168.99.103"
+  config.vm.network "private_network", ip: "192.168.2.193"
 end
 ```
 
 ```create.bat```
 
 ```bat
-docker-machine create --driver generic --generic-ip-address=192.168.99.103 --generic-ssh-user=vagrant --generic-ssh-key=vagrant default
+docker-machine create --driver generic --generic-ip-address=192.168.2.193 --generic-ssh-user=vagrant --generic-ssh-key=vagrant default
 ```
 
 and run:
